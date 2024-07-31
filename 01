@@ -1,0 +1,38 @@
+class Pila:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, elemento):
+        self.stack.append(elemento)
+
+    def pop(self):
+        if not self.stack:
+            return None
+        return self.stack.pop()
+
+    def peek(self):
+        if not self.stack:
+            return None
+        return self.stack[-1]
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
+    def mostrar(self):
+        return self.stack
+
+pila = Pila()
+elementos_pila = [10, 20, 30, 40, 50]
+
+for elemento in elementos_pila:
+    pila.push(elemento)
+
+print("Pila después de insertar elementos:")
+print(pila.mostrar())
+
+print("\nEliminando elementos de la pila:")
+print(pila.pop())
+print(pila.pop())
+print(pila.pop())
+print(pila.pop())
+print(pila.pop())
